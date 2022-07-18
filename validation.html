@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <table class="text-center">
+        <tr >
+            <h2 class="text-center text-bold">FORM JS CRUD</h2>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit(); "class="bg-white shadow-md rounded px-5 py-0 pt-4 mt-4 pb-8 mb-4 text-center " >
+                    <div class=" rounded mb-4 shadow  appearance-none label-floating">
+                        <label class=" mx-4 text-bold mb-4 font-bold">Full Name*</label><label class="validation-error hide" id="fullNameValidationError">.</label>
+                        <input type="text" name="fullName" id="fullName" required>
+                    </div>
+                    <div class="rounded mb-4 shadow  appearance-none label-floating"> 
+                        <label class=" mx-4 text-bold mb-4 font-bold">EMP Code</label>
+                        <input type="text" name="empCode" id="empCode" required>
+                    </div>
+                    <div class="rounded mb-4 shadow  appearance-none label-floating">
+                        <label class=" mx-4 text-bold mb-4 font-bold">Salary</label>
+                        <input type="text" name="salary" id="salary" required>
+                    </div>
+                    <div class="rounded mb-4 shadow  appearance-none label-floating">
+                        <label class=" mx-4 text-bold mb-4 font-bold">City</label>
+                        <input type="text" name="city" id="city" required>
+                    </div>
+                    <div  class="form-action-button form_action-button flex flex-wrap py-2 items-center justify-evenly pt-4 my-4">
+                        <input class="bg-black hover:bg-white hover:text-black text-white py-2 px-4 rounded"  type="submit" value="Submit">
+                    </div>
+                    <div class="form_action-button flex flex-wrap py-2 items-center justify-evenly pt-4 my-3" >
+                        <input class="bg-black hover:bg-white hover:text-green text-white  py-2 px-4 rounded"  type="reset" value="Reset">
+                    </div>
+                </form>
+            </td>
+        </tr>
+    </table>
+            <td>
+                <table class="list" id="employeeList" class=" list table-auto top-2  mb-8  border-8 border-black border-separate border-spacing-3 border border-slate-400" >
+                    <thead>
+                        <tr>
+                            <th class="border border-slate-300">Full Name</th>
+                            <th class="border border-slate-300"> EMP Code</th>
+                            <th class="border border-slate-300">Salary</th>
+                            <th class="border border-slate-300">City</th>
+                            <th class="border border-slate-300">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+       
+    <script src="script.js"></script>
+</body>
+</html>
